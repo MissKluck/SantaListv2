@@ -488,6 +488,9 @@ class Program
             {
                 NiceList.Add(Kid);
             }
+
+            functions.Nice();
+            functions.Naughty();
         }
 
     }
