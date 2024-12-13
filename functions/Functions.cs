@@ -48,7 +48,7 @@ public class Functions
         int a = 0;
         foreach (Person kid in kids)
         {
-            Console.WriteLine($"{kid.Name} receives {elves[a].Gifts} from {elves[a].Name} ({kid.NaughtyOrNiceScore})");
+            Console.WriteLine($"{kid.Name} receives {elves[a].Gifts} from {elves[a].Name}");
         }
     }
 }
