@@ -477,7 +477,7 @@ class Program
 
         foreach (Person Kid in Kids)
         {
-            Console.WriteLine($"{Kid.Name}: {Kid.NaughtyOrNiceScore}");
+            // Console.WriteLine($"{Kid.Name}: {Kid.NaughtyOrNiceScore}");
 
 
             if (Kid.NaughtyOrNiceScore < 0)
@@ -490,8 +490,8 @@ class Program
             }
 
         }
-            functions.Nice(NiceList);
-            functions.Naughty(NaughtyList);
+        functions.Nice(NiceList);
+        functions.Naughty(NaughtyList);
 
     }
 }
