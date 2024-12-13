@@ -13,14 +13,14 @@ public class Functions
 
     public List<Elves> CreateElves()
     {
-        List<Elves> elves = new List<Elves>{};
-           
-            elves.Add(new Elves{Name = "Alvhild", Speciality = "Woodworking", Gifts = "carved animal figurine"});
-            elves.Add(new Elves{Name = "Eirik", Speciality = "Electronics", Gifts = "Headset"});
-            elves.Add(new Elves{Name = "Freya", Speciality = "Sewing", Gifts = "Kithcen towels"});
-            elves.Add(new Elves{Name = "Bjørn", Speciality = "Blacksmithing", Gifts = "Lightsaber"});
-            elves.Add(new Elves{Name = "Ingvild", Speciality = "Ceramics", Gifts = "Flowerpot with the letters Mom written in the air above it"});
-        
+        List<Elves> elves = new List<Elves> { };
+
+        elves.Add(new Elves { Name = "Alvhild", Speciality = "Woodworking", Gifts = "carved animal figurine" });
+        elves.Add(new Elves { Name = "Eirik", Speciality = "Electronics", Gifts = "Headset" });
+        elves.Add(new Elves { Name = "Freya", Speciality = "Sewing", Gifts = "Kithcen towels" });
+        elves.Add(new Elves { Name = "Bjørn", Speciality = "Blacksmithing", Gifts = "Lightsaber" });
+        elves.Add(new Elves { Name = "Ingvild", Speciality = "Ceramics", Gifts = "Flowerpot with the letters Mom written in the air above it" });
+
         // For creating the elves
         return elves;
     }
@@ -28,9 +28,9 @@ public class Functions
     public void Naughty(List<Person> kids)
     {
         var random = new Random();
-        foreach(Person kid in kids)
+        foreach (Person kid in kids)
         {
-            if(random.Next(0, 10) == 0)
+            if (random.Next(0, 10) == 0)
             {
                 Console.WriteLine($"{kid.Name} is eaten by Gryla!!!");
             }
@@ -46,9 +46,11 @@ public class Functions
     {
         List<Elves> elves = CreateElves();
         int a = 0;
-        foreach(Person kid in kids)
+        foreach (Person kid in kids)
         {
+            if (a == 5) a = 0;
             Console.WriteLine($"{kid.Name} receives {elves[a].Gifts} from {elves[a].Name}");
+            a++;
         }
     }
 }
