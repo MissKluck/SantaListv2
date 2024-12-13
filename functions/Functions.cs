@@ -16,8 +16,8 @@ public class Functions
         List<Elves> elves = new List<Elves> { };
 
         elves.Add(new Elves { Name = "Alvhild", Speciality = "Woodworking", Gifts = "carved animal figurine" });
-        elves.Add(new Elves { Name = "Eirik", Speciality = "Electronics", Gifts = "Headset" });
-        elves.Add(new Elves { Name = "Freya", Speciality = "Sewing", Gifts = "Kithcen towels" });
+        elves.Add(new Elves { Name = "Erik", Speciality = "Electronics", Gifts = "Headset" });
+        elves.Add(new Elves { Name = "Freya", Speciality = "Sewing", Gifts = "Kitchen towels" });
         elves.Add(new Elves { Name = "Bjørn", Speciality = "Blacksmithing", Gifts = "Lightsaber" });
         elves.Add(new Elves { Name = "Ingvild", Speciality = "Ceramics", Gifts = "Flowerpot with the letters Mom written in the air above it" });
 
@@ -48,7 +48,9 @@ public class Functions
         int a = 0;
         foreach (Person kid in kids)
         {
-            Console.WriteLine($"{kid.Name} receives {elves[a].Gifts} from {elves[a].Name}");
+            if (a == 5) a = 0;
+            Console.WriteLine($"{kid.Name} receives {elves[a].Gifts} from {elves[a].Name} ({kid.NaughtyOrNiceScore})");
+            a++;
         }
     }
 }
