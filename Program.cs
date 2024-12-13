@@ -26,12 +26,12 @@ class Program
             }
             else
             {
-                Kid.NaughtyOrNiceScore += -10;
+                Kid.NaughtyOrNiceScore += -20;
             }
 
             if (Kid.DonatesToCharity)
             {
-                Kid.NaughtyOrNiceScore += 10;
+                Kid.NaughtyOrNiceScore += 20;
             }
             else
             {
