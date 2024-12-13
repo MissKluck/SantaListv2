@@ -477,7 +477,7 @@ class Program
 
         foreach (Person Kid in Kids)
         {
-            // Console.WriteLine(a.NaughtyOrNiceScore);
+            Console.WriteLine($"{Kid.Name}: {Kid.NaughtyOrNiceScore}");
 
 
             if (Kid.NaughtyOrNiceScore < 0)
