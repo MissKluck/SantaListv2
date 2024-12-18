@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // initialises the class Functions to main
         Functions functions = new Functions();
         // Step 1: Create a list of people
         List<Person> Kids = functions.PersonInfo();
@@ -472,25 +473,28 @@ class Program
             }
         }
 
+        // creates the naughty and nice list
         List<Person> NaughtyList = new List<Person> { };
         List<Person> NiceList = new List<Person> { };
 
         foreach (Person Kid in Kids)
         {
-            // Console.WriteLine($"{Kid.Name}: {Kid.NaughtyOrNiceScore}");
-
-
+            // assigns the kid to the naughty list if their score is below 0
             if (Kid.NaughtyOrNiceScore < 0)
             {
                 NaughtyList.Add(Kid);
             }
             else
             {
+                // assigns the kid to the nice list if their score is 0 or above
                 NiceList.Add(Kid);
             }
 
         }
+
+        // when reading through main, the program jumps to the nicelist in functions and executes it
         functions.Nice(NiceList);
+        // when the program has returned, it then jumps to the naughtylist and executes it before exiting the program
         functions.Naughty(NaughtyList);
 
     }

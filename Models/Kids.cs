@@ -1,5 +1,6 @@
 public class Person
 {
+    // defines what a kid is in this class
     public string? Id { get; set; }
     public string? Name { get; set; }
     public bool ToiletPaperOutward { get; set; }
